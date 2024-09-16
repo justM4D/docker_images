@@ -14,7 +14,7 @@
 printf "\n\t🐋 Installing arm gcc toolchain 🐋\t\n"
 
 # Find version
-export ARM_TOOLCHAIN_VERSION=$(curl -s https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads | grep -Po '<h4>Version \K.+(?= <span)')
+export ARM_TOOLCHAIN_VERSION=$(curl -s https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads | grep -Po '<h4>Version \K.*(?=<\/h4>)')
 echo "Current version of toolchain: ${ARM_TOOLCHAIN_VERSION}"
 
 # Download binary archive
